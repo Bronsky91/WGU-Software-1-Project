@@ -69,7 +69,29 @@ namespace C968
                 {
                     row.Selected = true;
                 }
+                else
+                {
+                    row.Selected = false;
+                }
             }
+        }
+
+        private void modifyPart_Click(object sender, EventArgs e)
+        {
+            modifyPartForm modifyPartForm = new modifyPartForm();
+            modifyPartForm.mainFormObject = this;
+            modifyPartForm.selectedPartID = Int32.Parse(partsTable.Rows[partsTable.CurrentCell.RowIndex].Cells[partsTable.CurrentCell.ColumnIndex].Value.ToString());
+            modifyPartForm.Show();
+        }
+
+        public void removeCurrentPart()
+        {
+            partsTable.Rows.Remove(partsTable.CurrentRow);
+        }
+
+        private void deletePart_Click(object sender, EventArgs e)
+        {
+            removeCurrentPart();
         }
     }
 }

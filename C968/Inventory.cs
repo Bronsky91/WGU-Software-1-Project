@@ -54,6 +54,38 @@ namespace C968
             allParts.Add(part);
         }
 
+        public static Part lookupPart(int partID)
+        {
+            foreach (Part p in allParts)
+            {
+                if (p.getPartID() == partID)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public static bool deletePart(int partID)
+        {
+            Part partToDelete = lookupPart(partID);
+            if (partToDelete == null)
+            {
+                return false;
+            }
+            else
+            {
+                productList.Remove(partToDelete);
+                return true;
+            }
+        }
+
+        public static void updatePart(int partID, Part part)
+        {
+            deletePart(partID);
+            addPart(part);
+        }
+
         public static int createPartID()
         {
             int highestID = 0;

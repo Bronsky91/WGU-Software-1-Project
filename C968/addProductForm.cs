@@ -33,7 +33,7 @@ namespace C968
             newProduct.setMax(maxStock);
             newProduct.setMin(minStock);
 
-            if (invInStock < maxStock && invInStock > minStock)
+            if (invInStock <= maxStock && invInStock >= minStock)
                 newProduct.setInStock(invInStock);
 
             // Inserts Product into Mainform Product Table

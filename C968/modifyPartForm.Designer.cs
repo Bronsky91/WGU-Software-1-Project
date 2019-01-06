@@ -35,202 +35,220 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.companyMachineLabel = new System.Windows.Forms.Label();
+            this.inHouseRadioButton = new System.Windows.Forms.RadioButton();
+            this.outsourcedRadioButton = new System.Windows.Forms.RadioButton();
+            this.partIDTextBox = new System.Windows.Forms.TextBox();
+            this.MachineCompanyIDTextBox = new System.Windows.Forms.TextBox();
+            this.maxTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.invTextBox = new System.Windows.Forms.TextBox();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.minTextBox = new System.Windows.Forms.TextBox();
+            this.savePart = new System.Windows.Forms.Button();
+            this.closeForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(25, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 29);
+            this.label1.Size = new System.Drawing.Size(79, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Modify Part";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(80, 134);
+            this.label2.Location = new System.Drawing.Point(40, 70);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 25);
+            this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 218);
+            this.label3.Location = new System.Drawing.Point(40, 113);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Name";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 296);
+            this.label4.Location = new System.Drawing.Point(40, 154);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 25);
+            this.label4.Size = new System.Drawing.Size(22, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Inv";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(80, 378);
+            this.label5.Location = new System.Drawing.Point(40, 197);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Price/Cost";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(80, 466);
+            this.label6.Location = new System.Drawing.Point(40, 242);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 25);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Max";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(427, 466);
+            this.label7.Location = new System.Drawing.Point(214, 242);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 25);
+            this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "Min";
             // 
-            // label8
+            // companyMachineLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(80, 566);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(165, 25);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Company Name";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.companyMachineLabel.AutoSize = true;
+            this.companyMachineLabel.Location = new System.Drawing.Point(40, 294);
+            this.companyMachineLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.companyMachineLabel.Name = "companyMachineLabel";
+            this.companyMachineLabel.Size = new System.Drawing.Size(82, 13);
+            this.companyMachineLabel.TabIndex = 8;
+            this.companyMachineLabel.Text = "Company Name";
             // 
-            // radioButton1
+            // inHouseRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(251, 44);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(129, 29);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "In-House";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.inHouseRadioButton.AutoSize = true;
+            this.inHouseRadioButton.Location = new System.Drawing.Point(126, 23);
+            this.inHouseRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.inHouseRadioButton.Name = "inHouseRadioButton";
+            this.inHouseRadioButton.Size = new System.Drawing.Size(68, 17);
+            this.inHouseRadioButton.TabIndex = 9;
+            this.inHouseRadioButton.TabStop = true;
+            this.inHouseRadioButton.Text = "In-House";
+            this.inHouseRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // outsourcedRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(453, 44);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(154, 29);
-            this.radioButton2.TabIndex = 10;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Outsourced";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.outsourcedRadioButton.AutoSize = true;
+            this.outsourcedRadioButton.Location = new System.Drawing.Point(226, 23);
+            this.outsourcedRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.outsourcedRadioButton.Name = "outsourcedRadioButton";
+            this.outsourcedRadioButton.Size = new System.Drawing.Size(80, 17);
+            this.outsourcedRadioButton.TabIndex = 10;
+            this.outsourcedRadioButton.TabStop = true;
+            this.outsourcedRadioButton.Text = "Outsourced";
+            this.outsourcedRadioButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // partIDTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(266, 131);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 31);
-            this.textBox1.TabIndex = 11;
+            this.partIDTextBox.Location = new System.Drawing.Point(133, 68);
+            this.partIDTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.partIDTextBox.Name = "partIDTextBox";
+            this.partIDTextBox.ReadOnly = true;
+            this.partIDTextBox.Size = new System.Drawing.Size(97, 20);
+            this.partIDTextBox.TabIndex = 11;
             // 
-            // textBox2
+            // MachineCompanyIDTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(266, 566);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 31);
-            this.textBox2.TabIndex = 12;
+            this.MachineCompanyIDTextBox.Location = new System.Drawing.Point(133, 294);
+            this.MachineCompanyIDTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MachineCompanyIDTextBox.Name = "MachineCompanyIDTextBox";
+            this.MachineCompanyIDTextBox.Size = new System.Drawing.Size(97, 20);
+            this.MachineCompanyIDTextBox.TabIndex = 12;
             // 
-            // textBox3
+            // maxTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(266, 466);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 31);
-            this.textBox3.TabIndex = 13;
+            this.maxTextBox.Location = new System.Drawing.Point(133, 242);
+            this.maxTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.maxTextBox.Name = "maxTextBox";
+            this.maxTextBox.Size = new System.Drawing.Size(52, 20);
+            this.maxTextBox.TabIndex = 13;
             // 
-            // textBox4
+            // nameTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(266, 212);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(190, 31);
-            this.textBox4.TabIndex = 14;
+            this.nameTextBox.Location = new System.Drawing.Point(133, 110);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(97, 20);
+            this.nameTextBox.TabIndex = 14;
             // 
-            // textBox5
+            // invTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(266, 296);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(190, 31);
-            this.textBox5.TabIndex = 15;
+            this.invTextBox.Location = new System.Drawing.Point(133, 154);
+            this.invTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.invTextBox.Name = "invTextBox";
+            this.invTextBox.Size = new System.Drawing.Size(97, 20);
+            this.invTextBox.TabIndex = 15;
             // 
-            // textBox6
+            // priceTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(266, 372);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(190, 31);
-            this.textBox6.TabIndex = 16;
+            this.priceTextBox.Location = new System.Drawing.Point(133, 193);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(97, 20);
+            this.priceTextBox.TabIndex = 16;
             // 
-            // textBox7
+            // minTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(533, 466);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 31);
-            this.textBox7.TabIndex = 17;
+            this.minTextBox.Location = new System.Drawing.Point(266, 242);
+            this.minTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.minTextBox.Name = "minTextBox";
+            this.minTextBox.Size = new System.Drawing.Size(52, 20);
+            this.minTextBox.TabIndex = 17;
             // 
-            // button1
+            // savePart
             // 
-            this.button1.Location = new System.Drawing.Point(337, 648);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 48);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.savePart.Location = new System.Drawing.Point(168, 337);
+            this.savePart.Margin = new System.Windows.Forms.Padding(2);
+            this.savePart.Name = "savePart";
+            this.savePart.Size = new System.Drawing.Size(68, 25);
+            this.savePart.TabIndex = 18;
+            this.savePart.Text = "Save";
+            this.savePart.UseVisualStyleBackColor = true;
+            this.savePart.Click += new System.EventHandler(this.savePart_Click);
             // 
-            // button2
+            // closeForm
             // 
-            this.button2.Location = new System.Drawing.Point(515, 648);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 48);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Cancel";
-            this.button2.UseVisualStyleBackColor = true;
+            this.closeForm.Location = new System.Drawing.Point(258, 337);
+            this.closeForm.Margin = new System.Windows.Forms.Padding(2);
+            this.closeForm.Name = "closeForm";
+            this.closeForm.Size = new System.Drawing.Size(66, 25);
+            this.closeForm.TabIndex = 19;
+            this.closeForm.Text = "Cancel";
+            this.closeForm.UseVisualStyleBackColor = true;
+            this.closeForm.Click += new System.EventHandler(this.closeForm_Click);
             // 
             // modifyPartForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 760);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label8);
+            this.ClientSize = new System.Drawing.Size(342, 395);
+            this.Controls.Add(this.closeForm);
+            this.Controls.Add(this.savePart);
+            this.Controls.Add(this.minTextBox);
+            this.Controls.Add(this.priceTextBox);
+            this.Controls.Add(this.invTextBox);
+            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.maxTextBox);
+            this.Controls.Add(this.MachineCompanyIDTextBox);
+            this.Controls.Add(this.partIDTextBox);
+            this.Controls.Add(this.outsourcedRadioButton);
+            this.Controls.Add(this.inHouseRadioButton);
+            this.Controls.Add(this.companyMachineLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -238,6 +256,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "modifyPartForm";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.modifyPartForm_Load);
@@ -255,17 +274,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label companyMachineLabel;
+        private System.Windows.Forms.RadioButton inHouseRadioButton;
+        private System.Windows.Forms.RadioButton outsourcedRadioButton;
+        private System.Windows.Forms.TextBox partIDTextBox;
+        private System.Windows.Forms.TextBox MachineCompanyIDTextBox;
+        private System.Windows.Forms.TextBox maxTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox invTextBox;
+        private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.TextBox minTextBox;
+        private System.Windows.Forms.Button savePart;
+        private System.Windows.Forms.Button closeForm;
     }
 }

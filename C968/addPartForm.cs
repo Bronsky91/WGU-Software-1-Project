@@ -39,7 +39,7 @@ namespace C968
             b.price = Double.Parse(PriceTextBox.Text);
             b.min = minStock;
             b.max = maxStock;
-            if (invInStock < maxStock && invInStock > minStock)
+            if (invInStock <= maxStock && invInStock >= minStock)
                 b.inStock = Int32.Parse(InvTextBox.Text);
 
             if (inHouseRadioButton.Checked)

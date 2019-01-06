@@ -89,6 +89,7 @@
             this.modifyPart.TabIndex = 5;
             this.modifyPart.Text = "Modify";
             this.modifyPart.UseVisualStyleBackColor = true;
+            this.modifyPart.Click += new System.EventHandler(this.modifyPart_Click);
             // 
             // deletePart
             // 
@@ -98,6 +99,7 @@
             this.deletePart.TabIndex = 6;
             this.deletePart.Text = "Delete";
             this.deletePart.UseVisualStyleBackColor = true;
+            this.deletePart.Click += new System.EventHandler(this.deletePart_Click);
             // 
             // groupBox1
             // 
