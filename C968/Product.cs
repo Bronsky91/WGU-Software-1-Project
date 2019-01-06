@@ -86,7 +86,7 @@ namespace C968
         {
             foreach (Part p in associatedParts)
             {
-                if (p.getProductID() == partID)
+                if (p.getPartID() == partID)
                 {
                     return p;
                 }

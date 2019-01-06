@@ -19,5 +19,16 @@ namespace C968
         {
             _machineID = id;
         }
+
+        public Inhouse(BasePart b, int machineID)
+        {
+            setPartID(b.partID);
+            setName(b.name);
+            setPrice(b.price);
+            setInStock(b.inStock);
+            setMin(b.min);
+            setMax(b.max);
+            setMachineID(machineID);
+        }
     }
 }

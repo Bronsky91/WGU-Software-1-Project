@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inhouse.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +78,8 @@
     <Compile Include="modifyProductForm.Designer.cs">
       <DependentUpon>modifyProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Outsourced.cs" />
+    <Compile Include="Part.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

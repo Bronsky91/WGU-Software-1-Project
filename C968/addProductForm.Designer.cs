@@ -65,122 +65,138 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 70);
+            this.label1.Location = new System.Drawing.Point(44, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 29);
+            this.label1.Size = new System.Drawing.Size(84, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Product";
             // 
             // minTextBox
             // 
-            this.minTextBox.Location = new System.Drawing.Point(532, 547);
+            this.minTextBox.Location = new System.Drawing.Point(266, 284);
+            this.minTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.minTextBox.Name = "minTextBox";
-            this.minTextBox.Size = new System.Drawing.Size(100, 31);
+            this.minTextBox.Size = new System.Drawing.Size(52, 20);
             this.minTextBox.TabIndex = 29;
             // 
             // priceTextBox
             // 
-            this.priceTextBox.Location = new System.Drawing.Point(265, 453);
+            this.priceTextBox.Location = new System.Drawing.Point(132, 236);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(190, 31);
+            this.priceTextBox.Size = new System.Drawing.Size(97, 20);
             this.priceTextBox.TabIndex = 28;
             // 
             // invTextBox
             // 
-            this.invTextBox.Location = new System.Drawing.Point(265, 377);
+            this.invTextBox.Location = new System.Drawing.Point(132, 196);
+            this.invTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.invTextBox.Name = "invTextBox";
-            this.invTextBox.Size = new System.Drawing.Size(190, 31);
+            this.invTextBox.Size = new System.Drawing.Size(97, 20);
             this.invTextBox.TabIndex = 27;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(265, 293);
+            this.nameTextBox.Location = new System.Drawing.Point(132, 152);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(190, 31);
+            this.nameTextBox.Size = new System.Drawing.Size(97, 20);
             this.nameTextBox.TabIndex = 26;
             // 
             // maxTextBox
             // 
-            this.maxTextBox.Location = new System.Drawing.Point(265, 547);
+            this.maxTextBox.Location = new System.Drawing.Point(132, 284);
+            this.maxTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maxTextBox.Name = "maxTextBox";
-            this.maxTextBox.Size = new System.Drawing.Size(100, 31);
+            this.maxTextBox.Size = new System.Drawing.Size(52, 20);
             this.maxTextBox.TabIndex = 25;
             // 
             // idTextBox
             // 
-            this.idTextBox.Location = new System.Drawing.Point(265, 212);
+            this.idTextBox.Location = new System.Drawing.Point(132, 110);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(190, 31);
+            this.idTextBox.Size = new System.Drawing.Size(97, 20);
             this.idTextBox.TabIndex = 24;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(426, 547);
+            this.label7.Location = new System.Drawing.Point(213, 284);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 25);
+            this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 23;
             this.label7.Text = "Min";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(79, 547);
+            this.label6.Location = new System.Drawing.Point(40, 284);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 25);
+            this.label6.Size = new System.Drawing.Size(27, 13);
             this.label6.TabIndex = 22;
             this.label6.Text = "Max";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 459);
+            this.label5.Location = new System.Drawing.Point(40, 239);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 21;
             this.label5.Text = "Price/Cost";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 377);
+            this.label4.Location = new System.Drawing.Point(40, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 25);
+            this.label4.Size = new System.Drawing.Size(22, 13);
             this.label4.TabIndex = 20;
             this.label4.Text = "Inv";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 299);
+            this.label3.Location = new System.Drawing.Point(40, 155);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 215);
+            this.label2.Location = new System.Drawing.Point(40, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 25);
+            this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "ID";
             // 
             // searchPart
             // 
-            this.searchPart.Location = new System.Drawing.Point(1013, 58);
+            this.searchPart.Location = new System.Drawing.Point(506, 30);
+            this.searchPart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchPart.Name = "searchPart";
-            this.searchPart.Size = new System.Drawing.Size(167, 55);
+            this.searchPart.Size = new System.Drawing.Size(84, 29);
             this.searchPart.TabIndex = 30;
             this.searchPart.Text = "Search";
             this.searchPart.UseVisualStyleBackColor = true;
+            this.searchPart.Click += new System.EventHandler(this.searchPart_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(1243, 70);
+            this.textBox2.Location = new System.Drawing.Point(622, 36);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(344, 31);
+            this.textBox2.Size = new System.Drawing.Size(174, 20);
             this.textBox2.TabIndex = 31;
             // 
             // addPartsTable
@@ -191,10 +207,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.addPartsTable.Location = new System.Drawing.Point(815, 146);
+            this.addPartsTable.Location = new System.Drawing.Point(408, 76);
+            this.addPartsTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addPartsTable.Name = "addPartsTable";
             this.addPartsTable.RowTemplate.Height = 33;
-            this.addPartsTable.Size = new System.Drawing.Size(956, 218);
+            this.addPartsTable.Size = new System.Drawing.Size(478, 113);
             this.addPartsTable.TabIndex = 32;
             // 
             // Column1
@@ -219,12 +236,14 @@
             // 
             // AddPart
             // 
-            this.AddPart.Location = new System.Drawing.Point(1563, 386);
+            this.AddPart.Location = new System.Drawing.Point(782, 201);
+            this.AddPart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddPart.Name = "AddPart";
-            this.AddPart.Size = new System.Drawing.Size(169, 63);
+            this.AddPart.Size = new System.Drawing.Size(84, 33);
             this.AddPart.TabIndex = 33;
             this.AddPart.Text = "Add";
             this.AddPart.UseVisualStyleBackColor = true;
+            this.AddPart.Click += new System.EventHandler(this.AddPart_Click);
             // 
             // deletePartsTable
             // 
@@ -234,10 +253,11 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.deletePartsTable.Location = new System.Drawing.Point(815, 477);
+            this.deletePartsTable.Location = new System.Drawing.Point(408, 248);
+            this.deletePartsTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deletePartsTable.Name = "deletePartsTable";
             this.deletePartsTable.RowTemplate.Height = 33;
-            this.deletePartsTable.Size = new System.Drawing.Size(956, 231);
+            this.deletePartsTable.Size = new System.Drawing.Size(478, 120);
             this.deletePartsTable.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn1
@@ -262,27 +282,32 @@
             // 
             // deletePart
             // 
-            this.deletePart.Location = new System.Drawing.Point(1563, 732);
+            this.deletePart.Location = new System.Drawing.Point(782, 381);
+            this.deletePart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.deletePart.Name = "deletePart";
-            this.deletePart.Size = new System.Drawing.Size(169, 63);
+            this.deletePart.Size = new System.Drawing.Size(84, 33);
             this.deletePart.TabIndex = 35;
             this.deletePart.Text = "Delete";
             this.deletePart.UseVisualStyleBackColor = true;
+            this.deletePart.Click += new System.EventHandler(this.deletePart_Click);
             // 
             // cancelAddProductForm
             // 
-            this.cancelAddProductForm.Location = new System.Drawing.Point(1563, 835);
+            this.cancelAddProductForm.Location = new System.Drawing.Point(782, 434);
+            this.cancelAddProductForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelAddProductForm.Name = "cancelAddProductForm";
-            this.cancelAddProductForm.Size = new System.Drawing.Size(169, 63);
+            this.cancelAddProductForm.Size = new System.Drawing.Size(84, 33);
             this.cancelAddProductForm.TabIndex = 36;
             this.cancelAddProductForm.Text = "Cancel";
             this.cancelAddProductForm.UseVisualStyleBackColor = true;
+            this.cancelAddProductForm.Click += new System.EventHandler(this.cancelAddProductForm_Click);
             // 
             // saveProduct
             // 
-            this.saveProduct.Location = new System.Drawing.Point(1343, 835);
+            this.saveProduct.Location = new System.Drawing.Point(672, 434);
+            this.saveProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveProduct.Name = "saveProduct";
-            this.saveProduct.Size = new System.Drawing.Size(169, 63);
+            this.saveProduct.Size = new System.Drawing.Size(84, 33);
             this.saveProduct.TabIndex = 37;
             this.saveProduct.Text = "Save";
             this.saveProduct.UseVisualStyleBackColor = true;
@@ -290,9 +315,9 @@
             // 
             // addProductForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1946, 944);
+            this.ClientSize = new System.Drawing.Size(973, 491);
             this.Controls.Add(this.saveProduct);
             this.Controls.Add(this.cancelAddProductForm);
             this.Controls.Add(this.deletePart);
@@ -314,6 +339,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "addProductForm";
             this.Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)(this.addPartsTable)).EndInit();

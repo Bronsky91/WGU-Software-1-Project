@@ -19,5 +19,16 @@ namespace C968
         {
             _companyName = companyName;
         }
+
+        public Outsourced(BasePart b, string companyName)
+        {
+            setPartID(b.partID);
+            setName(b.name);
+            setPrice(b.price);
+            setInStock(b.inStock);
+            setMin(b.min);
+            setMax(b.max);
+            setCompanyName(companyName);
+        }
     }
 }

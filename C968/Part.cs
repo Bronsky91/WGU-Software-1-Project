@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace C968
 {
+    public struct BasePart
+    {
+        public int partID;
+        public string name;
+        public double price;
+        public int inStock;
+        public int min;
+        public int max;
+    }
+
     public abstract class Part
     {
         protected int _partID;

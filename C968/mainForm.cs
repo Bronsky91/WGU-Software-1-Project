@@ -29,9 +29,22 @@ namespace C968
             productsTable.Rows.Add(row);
         }
 
+        public void addPartTableRow(Part part)
+        {
+            string[] row = {
+                part.getPartID().ToString(),
+                part.getName(),
+                part.getInStock().ToString(),
+                part.getPrice().ToString()
+            };
+
+            partsTable.Rows.Add(row);
+        }
+
         private void addPartsButton_Click(object sender, EventArgs e)
         {
             addPartForm addPartForm = new addPartForm();
+            addPartForm.mainFormObject = this;
             addPartForm.Show();
         }
 
@@ -45,6 +58,18 @@ namespace C968
         private void exitMainForm_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void searchParts_Click(object sender, EventArgs e)
+        {
+            string searchValue = searchPartsBar.Text;
+            foreach(DataGridViewRow row in partsTable.Rows)
+            {
+                if ((string)row.Cells[0].Value == searchValue)
+                {
+                    row.Selected = true;
+                }
+            }
         }
     }
 }

@@ -49,6 +49,20 @@ namespace C968
             addProduct(product);
         }
 
-       
+        public static void addPart(Part part)
+        {
+            allParts.Add(part);
+        }
+
+        public static int createPartID()
+        {
+            int highestID = 0;
+            foreach (Part p in allParts)
+            {
+                if (p.getPartID() > highestID)
+                    highestID = p.getPartID();
+            }
+            return highestID + 1;
+        }
     }
 }
