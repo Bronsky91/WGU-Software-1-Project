@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,7 @@ namespace C968
         private int _inStock;
         private int _min;
         private int _max;
+        private ArrayList associatedParts = new ArrayList();
 
         public int getProductID()
         {
@@ -73,6 +75,37 @@ namespace C968
         public void setMax(int max)
         {
             _max = max;
+        }
+
+        public void addAssociatedPart(Part part)
+        {
+            associatedParts.Add(part);
+        }
+
+        public Part lookupPart(int partID)
+        {
+            foreach (Part p in associatedParts)
+            {
+                if (p.getProductID() == partID)
+                {
+                    return p;
+                }
+            }
+            return null;
+        }
+
+        public bool removeAssociatedPart(int partID)
+        {
+            Part partToRemove = lookupPart(partID);
+            if (partToRemove == null)
+            {
+                return false;
+            }
+            else
+            {
+                associatedParts.Remove(partToRemove);
+                return true;
+            }
         }
     }
 }
