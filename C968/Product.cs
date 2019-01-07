@@ -82,7 +82,7 @@ namespace C968
             associatedParts.Add(part);
         }
 
-        public Part lookupPart(int partID)
+        public Part lookupAssociatedPart(int partID)
         {
             foreach (Part p in associatedParts)
             {
@@ -96,7 +96,7 @@ namespace C968
 
         public bool removeAssociatedPart(int partID)
         {
-            Part partToRemove = lookupPart(partID);
+            Part partToRemove = lookupAssociatedPart(partID);
             if (partToRemove == null)
             {
                 return false;
@@ -106,6 +106,17 @@ namespace C968
                 associatedParts.Remove(partToRemove);
                 return true;
             }
+        }
+
+        public void updateAssociatedPart(int partID, Part part)
+        {
+            removeAssociatedPart(partID);
+            addAssociatedPart(part);
+        }
+
+        public ArrayList getAssociatedParts()
+        {
+            return associatedParts;
         }
     }
 }

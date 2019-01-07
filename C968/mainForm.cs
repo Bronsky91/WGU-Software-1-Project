@@ -89,9 +89,43 @@ namespace C968
             partsTable.Rows.Remove(partsTable.CurrentRow);
         }
 
+        public void removeCurrentProduct()
+        {
+            productsTable.Rows.Remove(productsTable.CurrentRow);
+        }
+
         private void deletePart_Click(object sender, EventArgs e)
         {
             removeCurrentPart();
+        }
+
+        private void modifyProduct_Click(object sender, EventArgs e)
+        {
+            modifyProductForm modifyProductForm = new modifyProductForm();
+            modifyProductForm.mainFormObject = this;
+            modifyProductForm.selectedProductID = Int32.Parse(productsTable.Rows[productsTable.CurrentCell.RowIndex].Cells[productsTable.CurrentCell.ColumnIndex].Value.ToString());
+            modifyProductForm.Show();
+        }
+
+        private void deleteProduct_Click(object sender, EventArgs e)
+        {
+            removeCurrentProduct();
+        }
+
+        private void searchProducts_Click(object sender, EventArgs e)
+        {
+            string searchValue = searchProductBar.Text;
+            foreach (DataGridViewRow row in productsTable.Rows)
+            {
+                if ((string)row.Cells[0].Value == searchValue)
+                {
+                    row.Selected = true;
+                }
+                else
+                {
+                    row.Selected = false;
+                }
+            }
         }
     }
 }

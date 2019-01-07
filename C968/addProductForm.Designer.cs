@@ -42,14 +42,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.searchPart = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.partsSearch = new System.Windows.Forms.TextBox();
             this.addPartsTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AddPart = new System.Windows.Forms.Button();
-            this.deletePartsTable = new System.Windows.Forms.DataGridView();
+            this.currentPartsTable = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +58,7 @@
             this.cancelAddProductForm = new System.Windows.Forms.Button();
             this.saveProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.addPartsTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deletePartsTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentPartsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +75,7 @@
             // minTextBox
             // 
             this.minTextBox.Location = new System.Drawing.Point(266, 284);
-            this.minTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.minTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.minTextBox.Name = "minTextBox";
             this.minTextBox.Size = new System.Drawing.Size(52, 20);
             this.minTextBox.TabIndex = 29;
@@ -83,31 +83,31 @@
             // priceTextBox
             // 
             this.priceTextBox.Location = new System.Drawing.Point(132, 236);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(97, 20);
+            this.priceTextBox.Size = new System.Drawing.Size(105, 20);
             this.priceTextBox.TabIndex = 28;
             // 
             // invTextBox
             // 
             this.invTextBox.Location = new System.Drawing.Point(132, 196);
-            this.invTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.invTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.invTextBox.Name = "invTextBox";
-            this.invTextBox.Size = new System.Drawing.Size(97, 20);
+            this.invTextBox.Size = new System.Drawing.Size(105, 20);
             this.invTextBox.TabIndex = 27;
             // 
             // nameTextBox
             // 
             this.nameTextBox.Location = new System.Drawing.Point(132, 152);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(97, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(105, 20);
             this.nameTextBox.TabIndex = 26;
             // 
             // maxTextBox
             // 
             this.maxTextBox.Location = new System.Drawing.Point(132, 284);
-            this.maxTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maxTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.maxTextBox.Name = "maxTextBox";
             this.maxTextBox.Size = new System.Drawing.Size(52, 20);
             this.maxTextBox.TabIndex = 25;
@@ -115,10 +115,12 @@
             // idTextBox
             // 
             this.idTextBox.Location = new System.Drawing.Point(132, 110);
-            this.idTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.idTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(97, 20);
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(105, 20);
             this.idTextBox.TabIndex = 24;
+            this.idTextBox.Text = "Auto Gen - Disabled";
             // 
             // label7
             // 
@@ -183,7 +185,7 @@
             // searchPart
             // 
             this.searchPart.Location = new System.Drawing.Point(506, 30);
-            this.searchPart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchPart.Margin = new System.Windows.Forms.Padding(2);
             this.searchPart.Name = "searchPart";
             this.searchPart.Size = new System.Drawing.Size(84, 29);
             this.searchPart.TabIndex = 30;
@@ -191,13 +193,13 @@
             this.searchPart.UseVisualStyleBackColor = true;
             this.searchPart.Click += new System.EventHandler(this.searchPart_Click);
             // 
-            // textBox2
+            // partsSearch
             // 
-            this.textBox2.Location = new System.Drawing.Point(622, 36);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 31;
+            this.partsSearch.Location = new System.Drawing.Point(622, 36);
+            this.partsSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.partsSearch.Name = "partsSearch";
+            this.partsSearch.Size = new System.Drawing.Size(174, 20);
+            this.partsSearch.TabIndex = 31;
             // 
             // addPartsTable
             // 
@@ -208,7 +210,7 @@
             this.Column3,
             this.Column4});
             this.addPartsTable.Location = new System.Drawing.Point(408, 76);
-            this.addPartsTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addPartsTable.Margin = new System.Windows.Forms.Padding(2);
             this.addPartsTable.Name = "addPartsTable";
             this.addPartsTable.RowTemplate.Height = 33;
             this.addPartsTable.Size = new System.Drawing.Size(478, 113);
@@ -237,7 +239,7 @@
             // AddPart
             // 
             this.AddPart.Location = new System.Drawing.Point(782, 201);
-            this.AddPart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddPart.Margin = new System.Windows.Forms.Padding(2);
             this.AddPart.Name = "AddPart";
             this.AddPart.Size = new System.Drawing.Size(84, 33);
             this.AddPart.TabIndex = 33;
@@ -245,20 +247,20 @@
             this.AddPart.UseVisualStyleBackColor = true;
             this.AddPart.Click += new System.EventHandler(this.AddPart_Click);
             // 
-            // deletePartsTable
+            // currentPartsTable
             // 
-            this.deletePartsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.deletePartsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.currentPartsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.currentPartsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.deletePartsTable.Location = new System.Drawing.Point(408, 248);
-            this.deletePartsTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.deletePartsTable.Name = "deletePartsTable";
-            this.deletePartsTable.RowTemplate.Height = 33;
-            this.deletePartsTable.Size = new System.Drawing.Size(478, 120);
-            this.deletePartsTable.TabIndex = 34;
+            this.currentPartsTable.Location = new System.Drawing.Point(408, 248);
+            this.currentPartsTable.Margin = new System.Windows.Forms.Padding(2);
+            this.currentPartsTable.Name = "currentPartsTable";
+            this.currentPartsTable.RowTemplate.Height = 33;
+            this.currentPartsTable.Size = new System.Drawing.Size(478, 120);
+            this.currentPartsTable.TabIndex = 34;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -283,7 +285,7 @@
             // deletePart
             // 
             this.deletePart.Location = new System.Drawing.Point(782, 381);
-            this.deletePart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deletePart.Margin = new System.Windows.Forms.Padding(2);
             this.deletePart.Name = "deletePart";
             this.deletePart.Size = new System.Drawing.Size(84, 33);
             this.deletePart.TabIndex = 35;
@@ -294,7 +296,7 @@
             // cancelAddProductForm
             // 
             this.cancelAddProductForm.Location = new System.Drawing.Point(782, 434);
-            this.cancelAddProductForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancelAddProductForm.Margin = new System.Windows.Forms.Padding(2);
             this.cancelAddProductForm.Name = "cancelAddProductForm";
             this.cancelAddProductForm.Size = new System.Drawing.Size(84, 33);
             this.cancelAddProductForm.TabIndex = 36;
@@ -305,7 +307,7 @@
             // saveProduct
             // 
             this.saveProduct.Location = new System.Drawing.Point(672, 434);
-            this.saveProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveProduct.Margin = new System.Windows.Forms.Padding(2);
             this.saveProduct.Name = "saveProduct";
             this.saveProduct.Size = new System.Drawing.Size(84, 33);
             this.saveProduct.TabIndex = 37;
@@ -321,10 +323,10 @@
             this.Controls.Add(this.saveProduct);
             this.Controls.Add(this.cancelAddProductForm);
             this.Controls.Add(this.deletePart);
-            this.Controls.Add(this.deletePartsTable);
+            this.Controls.Add(this.currentPartsTable);
             this.Controls.Add(this.AddPart);
             this.Controls.Add(this.addPartsTable);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.partsSearch);
             this.Controls.Add(this.searchPart);
             this.Controls.Add(this.minTextBox);
             this.Controls.Add(this.priceTextBox);
@@ -339,11 +341,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "addProductForm";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.addProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.addPartsTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deletePartsTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentPartsTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,14 +368,14 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button searchPart;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox partsSearch;
         private System.Windows.Forms.DataGridView addPartsTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button AddPart;
-        private System.Windows.Forms.DataGridView deletePartsTable;
+        private System.Windows.Forms.DataGridView currentPartsTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;

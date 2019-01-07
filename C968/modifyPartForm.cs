@@ -24,6 +24,7 @@ namespace C968
         {
             var selectedPart = Inventory.lookupPart(selectedPartID);
 
+            // Populates form with selected part details
             partIDTextBox.Text = selectedPart.getPartID().ToString();
             nameTextBox.Text = selectedPart.getName();
             invTextBox.Text = selectedPart.getInStock().ToString();

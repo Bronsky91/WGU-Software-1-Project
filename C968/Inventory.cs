@@ -12,6 +12,11 @@ namespace C968
         private static ArrayList productList = new ArrayList();
         private static ArrayList allParts = new ArrayList();
 
+        public static ArrayList getAllParts()
+        {
+            return allParts;
+        }
+
         public static void addProduct(Product product)
         {
             productList.Add(product);
@@ -93,6 +98,17 @@ namespace C968
             {
                 if (p.getPartID() > highestID)
                     highestID = p.getPartID();
+            }
+            return highestID + 1;
+        }
+
+        public static int createProductID()
+        {
+            int highestID = 0;
+            foreach (Product p in productList)
+            {
+                if (p.getProductID() > highestID)
+                    highestID = p.getProductID();
             }
             return highestID + 1;
         }

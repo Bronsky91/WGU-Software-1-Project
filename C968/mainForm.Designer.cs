@@ -164,6 +164,7 @@
             this.deleteProduct.TabIndex = 5;
             this.deleteProduct.Text = "Delete";
             this.deleteProduct.UseVisualStyleBackColor = true;
+            this.deleteProduct.Click += new System.EventHandler(this.deleteProduct_Click);
             // 
             // modifyProduct
             // 
@@ -174,6 +175,7 @@
             this.modifyProduct.TabIndex = 4;
             this.modifyProduct.Text = "Modify";
             this.modifyProduct.UseVisualStyleBackColor = true;
+            this.modifyProduct.Click += new System.EventHandler(this.modifyProduct_Click);
             // 
             // addProduct
             // 
@@ -203,6 +205,7 @@
             this.searchProducts.TabIndex = 1;
             this.searchProducts.Text = "Search";
             this.searchProducts.UseVisualStyleBackColor = true;
+            this.searchProducts.Click += new System.EventHandler(this.searchProducts_Click);
             // 
             // label2
             // 
