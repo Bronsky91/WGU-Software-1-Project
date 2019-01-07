@@ -96,6 +96,7 @@ namespace C968
 
         private void deletePart_Click(object sender, EventArgs e)
         {
+            Inventory.deletePart(Int32.Parse(partsTable.Rows[partsTable.CurrentCell.RowIndex].Cells[partsTable.CurrentCell.ColumnIndex].Value.ToString()));
             removeCurrentPart();
         }
 
@@ -109,7 +110,18 @@ namespace C968
 
         private void deleteProduct_Click(object sender, EventArgs e)
         {
-            removeCurrentProduct();
+            Product productToBeDeleted = Inventory.lookupProduct(Int32.Parse(productsTable.Rows[productsTable.CurrentCell.RowIndex].Cells[productsTable.CurrentCell.ColumnIndex].Value.ToString()));
+            int countOfParts = productToBeDeleted.getAssociatedParts().Count;
+            if (countOfParts == 0)
+            {
+                Inventory.removeProduct(Int32.Parse(productsTable.Rows[productsTable.CurrentCell.RowIndex].Cells[productsTable.CurrentCell.ColumnIndex].Value.ToString()));
+                removeCurrentProduct();
+            }
+            else
+            {
+                MessageBox.Show("Cannot delete products that have associated parts", "Unable to delete",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void searchProducts_Click(object sender, EventArgs e)

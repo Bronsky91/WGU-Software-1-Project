@@ -108,12 +108,6 @@ namespace C968
             }
         }
 
-        public void updateAssociatedPart(int partID, Part part)
-        {
-            removeAssociatedPart(partID);
-            addAssociatedPart(part);
-        }
-
         public ArrayList getAssociatedParts()
         {
             return associatedParts;

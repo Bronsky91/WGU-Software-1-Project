@@ -227,6 +227,7 @@
             this.cancelAddPart.TabIndex = 18;
             this.cancelAddPart.Text = "Cancel";
             this.cancelAddPart.UseVisualStyleBackColor = true;
+            this.cancelAddPart.Click += new System.EventHandler(this.cancelAddPart_Click);
             // 
             // addPartForm
             // 

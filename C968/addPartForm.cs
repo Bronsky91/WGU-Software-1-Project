@@ -30,7 +30,18 @@ namespace C968
         private void Save_Click(object sender, EventArgs e)
         {
             int invInStock = Int32.Parse(InvTextBox.Text);
-            int minStock = Int32.Parse(minTextBox.Text);
+            int minStock = 0;
+            try
+            {
+                minStock = Int32.Parse(minTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please only type numbers in min field, " + minTextBox.Text + " is not a number", "Min Field Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             int maxStock = Int32.Parse(maxTextBox.Text);
 
             BasePart b = new BasePart();
@@ -65,6 +76,11 @@ namespace C968
         private void inHouseRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             companyOrMachineLabelUpdate();
+        }
+
+        private void cancelAddPart_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

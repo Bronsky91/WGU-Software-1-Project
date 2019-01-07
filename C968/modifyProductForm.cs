@@ -15,6 +15,7 @@ namespace C968
     {
         public mainForm mainFormObject;
         public int selectedProductID;
+        public Product selectedProduct;
 
         public modifyProductForm()
         {
@@ -23,7 +24,7 @@ namespace C968
 
         private void modifyProductForm_Load(object sender, EventArgs e)
         {
-            Product selectedProduct = Inventory.lookupProduct(selectedProductID);
+            selectedProduct = Inventory.lookupProduct(selectedProductID);
 
             // Populates form with the selected product details
             idTextBox.Text = selectedProduct.getProductID().ToString();
@@ -45,6 +46,15 @@ namespace C968
             foreach (Part p in associatedParts)
             {
                 addToTable(p, currentPartsTable);
+            }
+
+            // Removes previously selected parts to product associated parts
+            foreach (DataGridViewRow row in currentPartsTable.Rows)
+            {
+                if (row.Cells[0].Value != null)
+                {
+                    selectedProduct.removeAssociatedPart(Int32.Parse(row.Cells[0].Value.ToString()));
+                }
             }
         }
 
@@ -94,9 +104,20 @@ namespace C968
         {
             // Converts textbox values to integars
             int invInStock = Int32.Parse(invTextBox.Text);
-            int minStock = Int32.Parse(minTextBox.Text);
+            int minStock = 0;
             int maxStock = Int32.Parse(maxTextBox.Text);
 
+            try
+            {
+                minStock = Int32.Parse(minTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please only type numbers in min field, " + minTextBox.Text + " is not a number", "Min Field Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             // Creates Product with data inputted from textboxes
             Product newProduct = new Product();
             newProduct.setProductID(Int32.Parse(idTextBox.Text));
@@ -108,16 +129,13 @@ namespace C968
             if (invInStock <= maxStock && invInStock >= minStock)
                 newProduct.setInStock(invInStock);
 
-            // Adds currently selectd parts to product associated parts
+            // Updates currently selected parts to product associated parts
             foreach (DataGridViewRow row in currentPartsTable.Rows)
             {
-                if (row.Cells[0].Value == null)
-                    continue;
-
-                newProduct.updateAssociatedPart(
-                    Int32.Parse(row.Cells[0].Value.ToString()),
-                    Inventory.lookupPart(Int32.Parse(row.Cells[0].Value.ToString()))
-                    );
+                if (row.Cells[0].Value != null)
+                {
+                    newProduct.addAssociatedPart(Inventory.lookupPart(Int32.Parse(row.Cells[0].Value.ToString())));
+                }
             }
 
             // Inserts Product into Mainform Product Table and productsList

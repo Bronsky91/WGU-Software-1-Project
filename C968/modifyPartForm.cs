@@ -48,7 +48,17 @@ namespace C968
         private void savePart_Click(object sender, EventArgs e)
         {
             int invInStock = Int32.Parse(invTextBox.Text);
-            int minStock = Int32.Parse(minTextBox.Text);
+            int minStock = 0;
+            try
+            {
+                minStock = Int32.Parse(minTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please only type numbers in min field, " + minTextBox.Text + " is not a number", "Min Field Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int maxStock = Int32.Parse(maxTextBox.Text);
 
             BasePart b = new BasePart();

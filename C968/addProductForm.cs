@@ -32,7 +32,17 @@ namespace C968
         {
             // Converts textbox values to integars
             int invInStock = Int32.Parse(invTextBox.Text);
-            int minStock = Int32.Parse(minTextBox.Text);
+            int minStock = 0;
+            try
+            {
+                minStock = Int32.Parse(minTextBox.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Please only type numbers in min field, " + minTextBox.Text + " is not a number", "Min Field Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             int maxStock = Int32.Parse(maxTextBox.Text);
 
             // Creates Product with data inputted from textboxes
@@ -49,12 +59,15 @@ namespace C968
             // Adds currently selectd parts to product associated parts
             foreach (DataGridViewRow row in currentPartsTable.Rows)
             {
-                if (row.Cells[0].Value == null)
-                    continue;
+                if (row.Cells[0].Value != null)
+                {
+                    newProduct.addAssociatedPart(Inventory.lookupPart(
+                                        Int32.Parse(row.Cells[0].Value.ToString())
+                                        ));
+                }
 
-                newProduct.addAssociatedPart(Inventory.lookupPart(
-                    Int32.Parse(row.Cells[0].Value.ToString())
-                    ));
+
+                
             }
        
             // Inserts Product into Mainform Product Table and productsList
