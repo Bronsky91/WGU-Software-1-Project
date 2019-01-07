@@ -65,9 +65,6 @@ namespace C968
                                         Int32.Parse(row.Cells[0].Value.ToString())
                                         ));
                 }
-
-
-                
             }
        
             // Inserts Product into Mainform Product Table and productsList
